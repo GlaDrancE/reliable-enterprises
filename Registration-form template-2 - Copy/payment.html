@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+    <title>SNAP Registration</title>
+</head>
+<style>
+    .profile .material-symbols-outlined,
+    .table-bottom-del .material-symbols-outlined,
+    .profile-expand .material-symbols-outlined {
+        background: white;
+        border-radius: 50%;
+        font-weight: bold;
+        font-variation-settings:
+            'FILL' 1,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 48
+    }
+
+    .progress-bar .material-symbols-outlined {
+        background: white;
+        border-radius: 50%;
+        font-weight: bold;
+        font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 48
+    }
+</style>
+
+<body>
+    <!-- Phone sticky header -->
+    <div class="university-logo phone-head" style="z-index: 9999;">
+        <div class="snap-logo">
+            <h1 class="m-0">SNAP 2023</h1>
+        </div>
+        <div>
+            <img style="width: 26vh;" src="./public/img/icons/logo.png" alt="">
+        </div>
+        <div class="profile-expand d-none justify-content-end" style="width:37vw">
+            <span class="material-symbols-outlined" onclick="open_profile()"
+                style="font-size:2rem; border-radius:50%; background: #187FD3; color: white;">
+                account_circle
+            </span>
+        </div>
+    </div>    <!-- Phone profile section -->
+    <aside class="profile phone-profile rounded-0">
+        <div class="snap-id d-flex">
+            <div class="snap-head p-2">
+                SNAP ID
+            </div>
+            <p class="m-0 py-2 id-number">
+                230100214900077789
+            </p>
+            <div class="close-profile position-absolute" style="top: .4rem; right: .4rem;">
+                <span class="material-symbols-outlined" onclick="close_profile()"
+                    style="font-weight: bold; background: #187FD3; color: white; padding: 5px;">
+                    close
+                </span>
+            </div>
+        </div>
+        <div class="profile-info d-flex">
+            <div>
+                <div class="profile-name">
+                    Akshayaa Drithi Sindu Pandey
+                </div>
+                <div class="logout-btn d-flex my-1" style="padding-left: .7rem;">
+                    <a href="#"><span class="material-symbols-outlined">
+                            logout
+                        </span>Logout</a>
+                </div>
+            </div>
+            <div class="profile-pic">
+                <img src="./public/img/profile-pic.png" alt="">
+            </div>
+        </div>
+        <ul class="aside-navigation">
+            <li><a href="#"><span class="material-symbols-outlined">person</span>My Form</a></li>
+            <li><a href="#"><span class="material-symbols-outlined">assignment</span>Summary</a></li>
+            <li><a href="#"><span class="material-symbols-outlined">mail</span>Email</a></li>
+            <li><a href="#"><span class="material-symbols-outlined">description</span>Summary</a></li>
+            <li><a href="#"><span class="material-symbols-outlined">key</span>Change Password</a></li>
+            <li><a href="#"><span class="material-symbols-outlined">print</span>Print Application</a></li>
+            <li><a href="#"><span class="material-symbols-outlined">settings</span>Settings</a></li>
+        </ul>
+    </aside>
+    <!-- Upper Header -->
+    <header id="header">
+        <div class="university-logo">
+            <div class="snap-logo">
+                <h1 class="m-0">SNAP 2023</h1>
+            </div>
+            <div><img style="width: 26vh;" src="./public/img/icons/logo.png" alt=""></div>
+            <div class="profile-expand d-none justify-content-end" style="width:37vw">
+                <span class="material-symbols-outlined"
+                    style="font-size:2rem; border-radius:50%; background: #187FD3; color: white;">
+                    account_circle
+                </span>
+            </div>
+        </div>
+        <div class="progress-bar w-100">
+            <div class="progress-checks">
+                <div class="progress-line">
+                    
+                </div>
+                <div class="progress-label-line">
+
+                </div>
+                <div class="progress-items">
+                    <div class="check">
+                        <span class="material-symbols-outlined">
+                            check_circle
+                        </span>
+                    </div>
+                    <div class="progress-label" style="padding-left: 0 !important;">
+                        <div class="inner-progress-label">
+                            <div>
+                                <span class="material-symbols-outlined">
+                                    check_circle
+                                </span>
+                                <p> Employee Details</p>
+                            </div>
+                            <span class="pl-bottom" style="background: #FFBF00;"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-items">
+                    <div class="check">
+                        <span class="material-symbols-outlined">
+                            check_circle
+                        </span>
+                    </div>
+                    <div class="progress-label" style="">
+                        <div class="inner-progress-label">
+                            <div>
+                                <span class="material-symbols-outlined">
+                                    check_circle
+                                </span>
+                                <p> Personal Details</p>
+                            </div>
+                            <span class="pl-bottom"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-items">
+                    <div class="check">
+                        <span class="material-symbols-outlined">
+                            radio_button_unchecked
+                        </span>
+                    </div>
+                    <div class="progress-label" style="">
+                        <div class="inner-progress-label">
+                            <div>
+                                <span class="material-symbols-outlined">
+                                    radio_button_unchecked
+                                </span>
+                                <p>Work Experience</p>
+                            </div>
+                            <span class="pl-bottom" style="background: #00D959;"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-items">
+                    <div class="check">
+                        <span class="material-symbols-outlined">
+                            radio_button_unchecked
+                        </span>
+                    </div>
+                    <div class="progress-label" style="">
+                        <div class="inner-progress-label">
+                            <div>
+                                <span class="material-symbols-outlined">
+                                    radio_button_unchecked
+                                </span>
+                                <p>Extra Curricular Activities</p>
+                            </div>
+                            <span class="pl-bottom"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-items">
+                    <div class="check">
+                        <span class="material-symbols-outlined">
+                            radio_button_unchecked
+                        </span>
+                    </div>
+                    <div class="progress-label" style="">
+                        <div class="inner-progress-label">
+                            <div>
+                                <span class="material-symbols-outlined">
+                                    radio_button_unchecked
+                                </span>
+                                <p>Other Activities</p>
+                            </div>
+                            <span class="pl-bottom"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-items">
+                    <div class="check">
+                        <span class="material-symbols-outlined">
+                            radio_button_unchecked
+                        </span>
+                    </div>
+                    <div class="progress-label" style="">
+                        <div class="inner-progress-label">
+                            <div>
+                                <span class="material-symbols-outlined">
+                                    radio_button_unchecked
+                                </span>
+                                <p>Other Activities</p>
+                            </div>
+                            <span class="pl-bottom"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-items">
+                    <div class="check">
+                        <span class="material-symbols-outlined">
+                            radio_button_unchecked
+                        </span>
+                    </div>
+                    <div class="progress-label" style="">
+                        <div class="inner-progress-label">
+                            <div>
+                                <span class="material-symbols-outlined">
+                                    radio_button_unchecked
+                                </span>
+                                <p>Other Activities</p>
+                            </div>
+                            <span class="pl-bottom"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-items">
+                    <div class="check">
+                        <span class="material-symbols-outlined">
+                            radio_button_unchecked
+                        </span>
+                    </div>
+                    <div class="progress-label" style="">
+                        <div class="inner-progress-label">
+                            <div>
+                                <span class="material-symbols-outlined">
+                                    radio_button_unchecked
+                                </span>
+                                <p>Other Activities</p>
+                            </div>
+                            <span class="pl-bottom"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-items">
+                    <div class="check">
+                        <span class="material-symbols-outlined">
+                            radio_button_unchecked
+                        </span>
+                    </div>
+                    <div class="progress-label" style=" padding-right: 0 !important;">
+                        <div class="inner-progress-label">
+                            <div>
+                                <span class="material-symbols-outlined">
+                                    radio_button_unchecked
+                                </span>
+                                <p>Other Activities</p>
+                            </div>
+                            <span class="pl-bottom"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <aside class="profile">
+            <div class="snap-id d-flex">
+                <div class="snap-head p-2">
+                    SNAP ID
+                </div>
+                <p class="m-0 py-2 id-number">
+                    230100214900077789
+                </p>
+            </div>
+            <div class="profile-info d-flex">
+                <div>
+                    <div class="profile-name">
+                        Akshayaa Drithi Sindu Pandey
+                    </div>
+                    <div class="logout-btn d-flex my-1" style="padding-left: .7rem;">
+                        <a href="#"><span class="material-symbols-outlined">
+                                logout
+                            </span>Logout</a>
+                    </div>
+                </div>
+                <div class="profile-pic">
+                    <img src="./public/img/profile-pic.png" alt="">
+                </div>
+            </div>
+            <ul class="aside-navigation">
+                <li><a href="#"><span class="material-symbols-outlined">person</span>My Form</a></li>
+                <li><a href="#"><span class="material-symbols-outlined">assignment</span>Summary</a></li>
+                <li><a href="#"><span class="material-symbols-outlined">mail</span>Email</a></li>
+                <li><a href="#"><span class="material-symbols-outlined">description</span>Summary</a></li>
+                <li><a href="#"><span class="material-symbols-outlined">key</span>Change Password</a></li>
+                <li><a href="#"><span class="material-symbols-outlined">print</span>Print Application</a></li>
+                <li><a href="#"><span class="material-symbols-outlined">settings</span>Settings</a></li>
+            </ul>
+        </aside>
+        <div class="dummy"></div>
+        <div id="payment-form-body" class="form-body">
+            <div id="payment-container">
+                <div id="payment-details" class="container" style="border:none; padding: 0;">
+                    <div class="p-details">
+                        <h3>Personal Details</h3>
+                        <div><span>Name: </span><span>Akshayaa Pandey</span></div>
+                        <div><span>Email ID: </span><span>xyz@xyz.com</span></div>
+                        <div><span>Category: </span><span>OPEN</span></div>
+                        <div><span>Date of Birth:</span><span>01 Jan 1990</span></div>
+                    </div>
+                    <div>
+                        <div class="price-card">
+                            <h1>INR</h1>
+                            <div>
+                                <p>Total Amount Payble</p>
+                                <h1>99,99,999</h1>
+                            </div>
+                        </div>
+                        <a href="#"
+                            style="float: right; color: black; font-weight: bold; transform: translate(0px, 15px);">Pay
+                            Now</a>
+                    </div>
+                </div>
+                <div class="payment-selection">
+                    <h3>Payment Gareway Selection</h3>
+                    <div class="payment-options">
+                        <div>
+                            <input type="radio" name="payment" id="billdesk">
+                            <label for="billdesk"><img src="./public/img/billdesk_logo.cb23d596 1.png" alt=""></label>
+                        </div>
+                        <div>
+                            <input type="radio" name="payment" id="indianbank">
+                            <label for="indianbank"><img src="./public/img/indian-bank-logo-vector 1.png" alt=""></label>
+                        </div>
+                        <div>
+                            <input type="radio" name="payment" id="paytm">
+                            <label for="paytm"><img src="./public/img/Paytm_Logo_(standalone) 1.png" alt=""></label>
+                        </div>
+                    </div>
+                    <div class="payment-options">
+                        <div>
+                            <input type="radio" name="payment" id="easebuzz">
+                            <label for="easebuzz"><img src="./public/img/easebuzz.png" alt=""></label>
+                        </div>
+                        <div>
+                            <input type="radio" name="payment" id="demand-draft">
+                            <label for="demand-draft"><img src="./public/img/DEMAND DRAFT.png" alt=""></label>
+                        </div>
+                        <div>
+                            <input type="radio" name="payment" id="razorpay">
+                            <label for="razorpay"><img src="./public/img/Razorpay_logo 1.png" alt=""></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="exam-heading" style="display: flex; margin: 20px 0;">
+                    <p style="font-weight: bold; margin-right: 30px;">Exam Selection: </p>
+                    <p style="color: #DC3545;">Candidates are required to pay the Programme fee of the institutes.</p>
+                </div>
+                <div style="overflow-x:auto;">
+                    <table CELLSPACING="40px">
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox" name="" id=""></th>
+                                <th>S.No.</th>
+                                <th>Name of the Institute
+                                </th>
+                                <th>Designation
+                                </th>
+                                <th>Total Experience
+                                </th>
+                                <th>From Date
+                                </th>
+                                <th>To Date
+                                </th>
+                                <th>Status
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" name="" id=""></td>
+                                <td>1</td>
+                                <td>Symbiosis Pune Main</td>
+                                <td>NA</td>
+                                <td>18 Months</td>
+                                <td>2012</td>
+                                <td>2015</td>
+                                <td>Applied</td>
+                                <td>
+                                    <div style="display:flex; align-items:center;">
+                                        <span class="material-symbols-outlined">
+                                            edit_square
+                                        </span>
+                                        <span class="material-symbols-outlined">
+                                            delete
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="" id=""></td>
+                                <td>1</td>
+                                <td>Symbiosis Pune Main</td>
+                                <td>NA</td>
+                                <td>18 Months</td>
+                                <td>2012</td>
+                                <td>2015</td>
+                                <td>Applied</td>
+                                <td>
+    
+                                    <div style="display:flex; align-items:center;">
+                                        <span class="material-symbols-outlined">
+                                            edit_square
+                                        </span>
+                                        <span class="material-symbols-outlined">
+                                            delete
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="" id=""></td>
+                                <td>1</td>
+                                <td>Symbiosis Pune Main</td>
+                                <td>NA</td>
+                                <td>18 Months</td>
+                                <td>2012</td>
+                                <td>2015</td>
+                                <td>Applied</td>
+                                <td>
+    
+                                    <div style="display:flex; align-items:center;">
+                                        <span class="material-symbols-outlined">
+                                            edit_square
+                                        </span>
+                                        <span class="material-symbols-outlined">
+                                            delete
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="" id=""></td>
+                                <td>1</td>
+                                <td>Symbiosis Pune Main</td>
+                                <td>NA</td>
+                                <td>18 Months</td>
+                                <td>2012</td>
+                                <td>2015</td>
+                                <td>Applied</td>
+                                <td>
+    
+                                    <div style="display:flex; align-items:center;">
+                                        <span class="material-symbols-outlined">
+                                            edit_square
+                                        </span>
+                                        <span class="material-symbols-outlined">
+                                            delete
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+    
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-bottom-del" style="display:flex; align-items: center;">
+                    <input type="checkbox" name="" id="" style="margin-right:30px;">
+                    <span class="material-symbols-outlined">delete</span>
+                    <h3>Delete</h3>
+                </div>
+                <button type="submit" class="p-2">
+                    <p class="m-0">Pay Now</p> <span class="material-symbols-outlined">
+                        arrow_forward
+                        </span>
+                </button>
+            </div>
+            <p class="footer-text">In case you are logged out during the transaction, please login again to check the
+                status.</p>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
