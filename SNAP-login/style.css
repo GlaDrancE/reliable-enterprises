@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+body{
+    font-family: Poppins;
+}
+
+
+.section-one {
+   height: 100vh;
+   background-color: white;
+}
+
+.footer-pad {
+    padding:30px;
+}
+
+.footer-pad p {
+    margin-bottom:3px !important;
+    font-size:14px;
+}
+
+.copyrights {
+    padding:40px 80px;
+    font-size:12px;
+}
+
+.footer-card {
+    height: 200px; 
+    border-radius: 0 0px 20px 0px;
+    background:#F7F6F5;
+    /* margin-top:36px; */
+    float: right;
+ }
+
+.header-title {
+    color: #005DAB;
+    font-size: 20px;
+    line-height:54.64px;
+    padding-top:20px;
+}
+
+.section-two {
+   height: 100vh; 
+   background-color: white;
+}
+
+.input-box {
+    padding:40px 80px;
+
+
+}
+
+.form-control {
+    background-color: #D9D9D9;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    border-radius: 6px;
+    background-color: #000;
+}
+
+.form-control {
+    border-radius: 6px !important;
+}
+
+.form-text {
+    float: right;
+    padding:10px 0 20px 0;
+}
+
+.form-register {
+    padding:10px 0 20px 0;
+}
+
+.register-text {
+    text-align: center;
+    padding-top: 50px;
+}
+
